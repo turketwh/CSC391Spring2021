@@ -21,10 +21,10 @@ public class Main {
 
       String regularExpression = "";
 
-      Pattern p = Pattern.compile(regularExpression);
+      
 
       for (int i = 0; i < 10; i++) {
-        if (p.matcher(financialValues[i]).matches() == true) {
+        if (Pattern.matches(regularExpression,financialValues[i]) == true) {
           System.out.println("Financial value " + i + ": " + financialValues[i] + " is accepted");
         }
         else {
